@@ -24,7 +24,7 @@ def note_generator(img):
     prompt = """You are an expert IELTS Tutor. Analyze the uploaded image(s) and generate a comprehensive study note in English.
           The note must include:
           1. Summary: A brief overview of the content in English, followed by a 2-line summary in Bengali.
-          2. Key Vocabulary: Extract 5-8 academic words. For each word, provide:
+          2. Key Vocabulary: Extract 10-15 academic words. For each word, provide:
          - Meaning in English
          - Meaning in Bengali
          - A sample sentence related to IELTS.
@@ -50,9 +50,9 @@ def quiz_generator(img,difficulty):
 
     prompt = f"""Based on the provided image(s), create an IELTS-style practice quiz. The difficulty level is: {difficulty}.
                The quiz should contain:
-                1. 3 Multiple Choice Questions (MCQs) focusing on the main ideas.
-                2. 2 'Fill in the blanks' using words from the text to test vocabulary.
-                3. 1 'True/False/Not Given' question to practice IELTS Reading logic.
+                1. 7 Multiple Choice Questions (MCQs) focusing on the main ideas.
+                2. 5 'Fill in the blanks' using words from the text to test vocabulary.
+                3. 5 'True/False/Not Given' question to practice IELTS Reading logic.
 
                 Instructions:
                - Write the questions and options in English.
