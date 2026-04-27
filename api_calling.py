@@ -21,8 +21,17 @@ client = genai.Client(api_key = my_api_key)
 
 def note_generator(img):
 
-    prompt = """Summarize the picture in note format at max 250 words,
-      make sure to add necessay markdown to differentiat different section . explain in bangla"""
+    prompt = """You are an expert IELTS Tutor. Analyze the uploaded image(s) and generate a comprehensive study note in English.
+The note must include:
+1. Summary: A brief overview of the content in English, followed by a 2-line summary in Bengali.
+2. Key Vocabulary: Extract 5-8 academic words. For each word, provide:
+   - Meaning in English
+   - Meaning in Bengali
+   - A sample sentence related to IELTS.
+3. Grammar & Structure: Highlight any complex sentence structures found in the text (like Passive Voice or Conditionals) and explain them briefly.
+4. Tips: Give one IELTS-specific tip (Reading or Writing) based on this content.
+
+Use clear Markdown headings and bullet points."""
 
     response = client.models.generate_content(
         model= "gemini-3-flash-preview",
@@ -40,7 +49,16 @@ def audio_transcription(text):
 
 def quiz_generator(img,difficulty):
 
-    prompt = f"Generate 5 quizzes based on the {difficulty}. Make sure to add markdown to differentiate the options and add correct answer also,after the quiz, language will be bangla"
+    prompt = f"Based on the provided image(s), create an IELTS-style practice quiz. The difficulty level is: {difficulty}.
+The quiz should contain:
+1. 3 Multiple Choice Questions (MCQs) focusing on the main ideas.
+2. 2 'Fill in the blanks' using words from the text to test vocabulary.
+3. 1 'True/False/Not Given' question to practice IELTS Reading logic.
+
+Instructions:
+- Write the questions and options in English.
+- After each question, provide a 'Hint' in Bengali to help the student think.
+- At the very bottom, provide an 'Answer Key' with brief explanations in both English and Bengali."
 
     response = client.models.generate_content(
         model= "gemini-3-flash-preview",
