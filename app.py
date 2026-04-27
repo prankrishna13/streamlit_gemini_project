@@ -92,8 +92,11 @@ if img and option:
     with st.container(border=True):
         st.subheader(f"Quiz with {option} Difficulty")
         with st.spinner("AI is writing"):
-             qu = quiz_generator(pil_list,option)
-             st.markdown(qu)
+            try:
+              qu = quiz_generator(pil_list, option)
+              st.markdown(qu)
+            except Exception as e:
+                    st.error(f"Quiz Error: {e}")
 
 
 
