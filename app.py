@@ -4,7 +4,7 @@ from PIL import Image
 from google import genai 
  
 
-st.markdown("<h1 style=' text-align: justify;  '>Your personal AI chat box (MOON) <h1/> ", unsafe_allow_html=True)
+st.markdown("<h1 style=' text-align: justify;  '>Your personal AI (MOON) <h1/> ", unsafe_allow_html=True)
 # st.divider()
 #st.caption("Illuminate your curiosity with Moon—your AI companion for coding, creativity, and cosmic insights.")
 
