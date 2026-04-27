@@ -15,7 +15,7 @@ with st.sidebar:
     st.logo("m.png")
     st.header("Control Panel")
     img = st.file_uploader(
-        "Upload your photos",type=['jpg','png','jpeg'],
+        "Upload your image",type=['jpg','png','jpeg'],
         accept_multiple_files=True
     )
 
