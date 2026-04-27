@@ -48,7 +48,7 @@ def audio_transcription(text):
 
 def quiz_generator(img,difficulty):
 
-    prompt = f"Based on the provided image(s), create an IELTS-style practice quiz. The difficulty level is: {difficulty}.
+    prompt = f"""Based on the provided image(s), create an IELTS-style practice quiz. The difficulty level is: {difficulty}.
                The quiz should contain:
                 1. 3 Multiple Choice Questions (MCQs) focusing on the main ideas.
                 2. 2 'Fill in the blanks' using words from the text to test vocabulary.
@@ -57,7 +57,7 @@ def quiz_generator(img,difficulty):
                 Instructions:
                - Write the questions and options in English.
                -  After each question, provide a 'Hint' in Bengali to help the student think.
-              - At the very bottom, provide an 'Answer Key' with brief explanations in both English and Bengali."
+              - At the very bottom, provide an 'Answer Key' with brief explanations in both English and Bengali."""
 
     response = client.models.generate_content(
         model= "gemini-3-flash-preview",
