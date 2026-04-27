@@ -12,7 +12,7 @@ st.markdown("<h1 style=' text-align: justify;  '>Your personal AI (MOON) <h1/> "
 # side bar
 
 with st.sidebar:
-    #st.logo("simu.png")
+    st.logo("m.png")
     st.header("Control Panel")
     img = st.file_uploader(
         "Upload your photos",type=['jpg','png','jpeg'],
