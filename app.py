@@ -53,7 +53,7 @@ if button:
     if not img:
         st.error("You must upload 1 photo")
     if not option:
-        st.error("You mast select a difficult")
+        st.error("You must select a difficulty level")
 
 
 # for note
