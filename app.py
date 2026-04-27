@@ -103,7 +103,7 @@ if img and option:
 
 
 
-st.text_input("",placeholder="Ask Moon")
+st.text_input("",placeholder="Ask Moon (you can use it latter)")
 
 
 # Footer 
