@@ -38,7 +38,7 @@ with st.sidebar:
 
     st.divider()
 
-    option = st.selectbox("Difficultys",['Easy','Medium','Hard'],index=None)
+    option = st.selectbox("Difficulty Level",['Easy','Medium','Hard'],index=None)
 
     
 
